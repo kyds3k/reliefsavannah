@@ -50,10 +50,24 @@ input.submit {
     border-radius: .625em;
     font-weight: bold;
     margin-bottom: 1em;
+    display: inline-block;
+}
+
+.show-all {
+    color: #fff;
+    background-color: #002343;
+    border: .125em solid #50bcc9;
+    border-radius: .625em;
+    font-weight: bold;
+    margin: 0 0 1em 1em;
+    display: inline-block;
+    text-decoration: none;
+    padding: .4em;
 }
 
 .bars-container {
     position: relative;
+    margin-bottom: 2em;
 }
 
 .bar {
@@ -76,6 +90,25 @@ input.submit {
     word-wrap: break-word;
 }
 
+.bar-content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.bar-image {
+    width: 50%;
+}
+
+.bar-image img {
+    width: 100%;
+}
+
+.bar-text {
+    padding-left: 1em;
+    width: 50%;
+}
+
 @media only screen and (max-width: 1024px) {
 
     .content h1 {
@@ -90,4 +123,33 @@ input.submit {
     input {
         width: 80vw;
     }
+
+    .show-all, .submit{
+        width: 50vw;
+        font-size: .75em;
+        margin-top: 2em;
+    }
+
+    .bar-content {
+        flex-direction: column;
+    }
+
+    .bar-image,
+    .bar-text {
+        width: 100%;
+    }
+
+    .bar-image {
+        margin-bottom: 1em;
+    }
+
+    .bar-text {
+        padding-left: 0;
+    }
+
+    .powered {
+        margin-bottom: 2em;
+    }
+
+
 }
